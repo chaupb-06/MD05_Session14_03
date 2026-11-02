@@ -1,0 +1,6 @@
+1. Biểu đồ JVM Heap
+Ý nghĩa: Biểu đồ này giám sát lượng bộ nhớ Heap đang sử dụng của JVM. Dựa vào ảnh, bộ nhớ của bạn đang cực kỳ an toàn, chỉ chiếm chưa tới 10% giới hạn max. Không hề có dấu hiệu đáy của đồ thị bị dâng cao (memory leak) hay tiến sát mức giới hạn có nguy cơ gây lỗi OOM (Out Of Memory)
+2. Biểu đồ G1 Eden Space
+Ý nghĩa: Đồ thị răng cưa là minh chứng rõ ràng cho chu kỳ sống của ứng dụng Java: Đối tượng mới liên tục được tạo ra làm bộ nhớ tăng lên (cạnh lên của răng cưa), sau đó bộ thu gom rác (Garbage Collection) chạy dọn dẹp các đối tượng không còn dùng, khiến bộ nhớ giảm xuống (cạnh cắm thẳng đứng). Chu kỳ này trên máy bạn đang diễn ra rất mượt mà.
+3. Biểu đồ Pause Durations trong Garbage Collection
+Ý nghĩa: Biểu đồ này đo lường tổng thời gian ứng dụng phải "đóng băng" mọi luồng xử lý để dọn rác. Nếu hệ thống dành quá nhiều thời gian ở bước này (ví dụ hàng trăm ms hoặc cả giây), nó sẽ gây ra độ trễ nghiêm trọng cho người dùng. Với mức tạm dừng chỉ 2.5 ms như trong ảnh, hệ thống của bạn đang chạy cực kỳ nhanh và tối ưu.

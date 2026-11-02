@@ -1,0 +1,1 @@
+thiếu dòng: management.metrics.tags.application=tên-ứng-dụng

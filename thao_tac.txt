@@ -1,0 +1,5 @@
+Trên menu điều hướng của Grafana, chọn Dashboards, nhấn New và chọn Import
+Tại ô nhập ID, điền 4701 và nhấn nút Load
+Đặt tên cho Dashboard
+Tại mục Data source ở dưới cùng, chọn Prometheus và nhấn Import để tải giao diện
+Bấm import
